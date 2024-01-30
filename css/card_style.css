@@ -81,7 +81,7 @@ img{
     box-shadow: inset 2px 2px 1px rgba(251, 251, 254, 0.3),
                 inset -2px -2px 1px rgba(251, 251, 254, 0.2);
     border-radius: 1.5rem;
-    /* backdrop-filter: blur(10px); */
+    backdrop-filter: blur(10px);
 }
 
 .card_img{
@@ -156,4 +156,71 @@ img{
 .card_glass:hover .card_link{
     transform: translateX(-1.5rem);
 }
+
+.card_circle{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: linear-gradient(130deg,
+                rgba(77,73,191,.8), rgba(255,255,255,.2));
+}
+
+.card_circle1{
+    top: 20%;
+    left: -20%;
+}
+
+.card_circle2{
+    bottom: 20%;
+    right: -25%;
+    background: linear-gradient(130deg,
+                rgba(5, 219, 242, .8),
+                rgba(255, 255, 255, .2));
+}
 /* ==========MEDIA QUERIES===========   */
+
+@media screen and (min-width: 568px){
+    .card_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .bd-container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card{
+        padding: 0;
+    }
+
+    .card_container{
+        height: 100vh;
+        grid-template-columns: repeat(3, 1fr);
+        align-content: center;
+    }
+
+    .card_circle1{
+        left: -10%;
+        top: 30%;
+    }
+
+    .card_circle2{
+        right: -10%;
+        bottom: 30%;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .card_circle1{
+        left: 20%;
+        top: 30%;
+    }
+    .card_circle2{
+        right: 20%;
+    }
+}
+
+/* Done */
